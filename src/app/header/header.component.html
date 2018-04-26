@@ -1,17 +1,18 @@
 <header>
   <div class="nav">
     <div class="nav-left">
-      <div class="mobile-menu">
-        <img src="../../assets/icons/group-2.svg" alt="menu">
+      <div class="mobile-menu" (click)="activateMobilemenu()">
+        <img class="menu-icon" src="../../assets/icons/group-2.svg" alt="menu" [ngClass]="{'non-active': mobileActive}">
+        <img class="close-icon" src="../../assets/icons/page-1-2.svg" alt="menu" [ngClass]="{'active': mobileActive}">
       </div>
       <div class="logo">
         <img src="../../assets/imgs/blue.svg" alt="logo">
       </div>
-      <div class="switch">
-        <img src="../../assets/icons/fill-1.svg" alt="">
+      <div class="switch mobile-menu">
+        <img src="../../assets/icons/fill-1.svg" alt="switch">
       </div>
     </div>
-    <div class="nav-right">
+    <div class="nav-right" [ngClass]="{'active': mobileActive}">
       <ul class="menu">
         <li class="menu-element">
           <a href="#">Strona głowna</a>
@@ -27,7 +28,7 @@
         </li>
         <li class="menu-element">
           <a href="#">
-            <img src="../../assets/icons/fill-1.svg" alt="">
+            <img class="switch-icon" src="../../assets/icons/fill-1.svg" alt="switch" [ngClass]="{'non-active': mobileActive}">
           </a>
         </li>
       </ul>

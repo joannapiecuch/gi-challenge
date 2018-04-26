@@ -3,6 +3,10 @@
 header {
   padding: 20px 0;
 
+  .mobile-menu, .mobile-menu-box {
+    display: none;
+  }
+
   .nav {
     display: flex;
     flex-direction: row;
@@ -10,7 +14,6 @@ header {
     padding: 0 71px;
     align-items: center;
     font-size: 1.3em;
-    font-weight: 600;
 
     &-right {
       .menu {
@@ -24,9 +27,6 @@ header {
           padding: 0 12px;
 
           a {
-            text-decoration: none;
-            color: $mainColorFont;
-
             &:hover {
               color: $blue;
             }
@@ -51,6 +51,24 @@ header {
     justify-content: space-around;
     padding: 0 24px;
 
+    .mobile-menu {
+      display: block;
+
+      .close-icon {
+        display: none;
+        &.active {
+          display: block;
+        }
+      }
+
+      .menu-icon {
+        display: block;
+        &.non-active {
+          display: none;
+        }
+      }
+    }
+
     &-left {
       width: 100%;
       display: flex;
@@ -59,6 +77,44 @@ header {
     }
     &-right {
       display: none;
+
+      .switch-icon {
+        display: block;
+        &.non-active {
+          display: none;
+        }
+      }
+
+      &.active {
+        display: block;
+        background: $white;
+        height: 100vh;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        .menu {
+          flex-direction: column;
+          padding: 0 24px;
+          &-element {
+            padding: 12px 0;
+            a {
+              font-size: 1.25em;
+              color: $mainColorFont;
+            }
+
+            &:hover {
+              color: $blue;
+            }
+          }
+
+          .active {
+            color: $blue;
+          }
+        }
+      }
     }
   }
+
 }

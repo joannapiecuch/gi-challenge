@@ -9,6 +9,7 @@ main {
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
+    background-color: $black;
 
     .content {
       padding: 154px 71px;
@@ -18,7 +19,6 @@ main {
         letter-spacing: 1.4px;
         font-size: 1.1em;
         color: $bluey-grey;
-        font-weight: bold;
         text-transform: uppercase;
       }
 
@@ -29,7 +29,6 @@ main {
 
       .description {
         font-size: 1.6em;
-        font-weight: 600;
         margin-bottom: 48px;
         margin-top: 16px;
         width: 392px;
@@ -44,7 +43,6 @@ main {
         color: $white;
         text-transform: uppercase;
         font-size: 1.2em;
-        font-weight: 600;
         letter-spacing: 1px;
         padding: 15px 16px;
 
@@ -52,9 +50,46 @@ main {
           margin-right: 16px;
         }
       }
+
+      .slider {
+        margin-top: 100px;
+        overflow: scroll;
+        &-list {
+          display: flex;
+          flex-direction: row;
+          list-style: none;
+          padding: 0;
+
+          li {
+            padding: 0 8px;
+
+            &:first-child {
+              padding-left: 0;
+            }
+
+            .image {
+              position: relative;
+              margin-bottom: 5px;
+              img {
+                background-color: $black;
+              }
+            }
+
+            .lock {
+              position: absolute;
+            }
+          }
+        }
+      }
+
     }
   }
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 
 @media (max-width: 768px) {
   main {
@@ -64,7 +99,7 @@ main {
       height: auto;
       .content {
         text-align: center;
-        padding: 81px 24px 104px;
+        padding: 81px 24px 0;
 
         h1 {
           font-size: 3.4em;
@@ -76,6 +111,14 @@ main {
 
         .btn-blue {
           padding: 15px 11px;
+        }
+
+        .slider {
+          margin-top: 50px;
+
+          .title {
+            text-align: left;
+          }
         }
       }
     }

@@ -1,9 +1,17 @@
+@import "assets/styles/colors";
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 10px;
+  font-weight: 600;
   margin: 0;
 }
 
 h1 {
   margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $mainColorFont;
 }
