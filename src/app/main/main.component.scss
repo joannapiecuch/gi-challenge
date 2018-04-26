@@ -12,7 +12,7 @@ main {
     background-color: $black;
 
     .content {
-      padding: 154px 71px;
+      padding: 154px 0 154px 71px;
       color: $white;
 
       .title {
@@ -52,12 +52,12 @@ main {
       }
 
       .slider {
+        width: 900px;
         margin-top: 100px;
         overflow: scroll;
         &-list {
           display: flex;
           flex-direction: row;
-          list-style: none;
           padding: 0;
 
           li {
@@ -70,6 +70,13 @@ main {
             .image {
               position: relative;
               margin-bottom: 5px;
+
+              .lock {
+                position: absolute;
+                top: 40%;
+                left: 45%;
+              }
+
               img {
                 background-color: $black;
               }
@@ -90,7 +97,6 @@ main {
   display: none;
 }
 
-
 @media (max-width: 768px) {
   main {
     flex-direction: column;
@@ -100,6 +106,10 @@ main {
       .content {
         text-align: center;
         padding: 81px 24px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
 
         h1 {
           font-size: 3.4em;
@@ -115,6 +125,8 @@ main {
 
         .slider {
           margin-top: 50px;
+          width: 260px;
+          padding: 0 24px;
 
           .title {
             text-align: left;

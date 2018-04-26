@@ -10,11 +10,6 @@
     color: $white;
     padding: 40px 0 40px 32px;
 
-    ul {
-      padding: 0;
-      list-style: none;
-    }
-
     &-summary {
       margin-bottom: 63px;
 
@@ -101,5 +96,11 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    width: auto;
   }
 }
