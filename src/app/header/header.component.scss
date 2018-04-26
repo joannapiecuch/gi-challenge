@@ -21,11 +21,11 @@ header {
         padding: 0;
 
         &-element {
-          padding: 0 9px;
+          padding: 0 12px;
 
           a {
             text-decoration: none;
-            color: $darkGray;
+            color: $mainColorFont;
 
             &:hover {
               color: $blue;
