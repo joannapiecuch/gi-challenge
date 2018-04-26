@@ -1,4 +1,6 @@
-.content {
+@import "../../assets/styles/colors";
+
+main {
   display: flex;
   justify-content: space-around;
 
@@ -7,5 +9,75 @@
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
+
+    .content {
+      padding: 154px 71px;
+      color: $white;
+
+      .title {
+        letter-spacing: 1.4px;
+        font-size: 1.1em;
+        color: $bluey-grey;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        font-size: 4.4em;
+        font-weight: 800;
+      }
+
+      .description {
+        font-size: 1.6em;
+        font-weight: 600;
+        margin-bottom: 48px;
+        margin-top: 16px;
+        width: 392px;
+      }
+
+      .btn-blue {
+        display: flex;
+        align-items: center;
+        border: 1px solid $blue;
+        border-radius: 4px;
+        background-color: $blue;
+        color: $white;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        font-weight: 600;
+        letter-spacing: 1px;
+        padding: 15px 16px;
+
+        img {
+          margin-right: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+
+    .left {
+      height: auto;
+      .content {
+        text-align: center;
+        padding: 81px 24px 104px;
+
+        h1 {
+          font-size: 3.4em;
+        }
+
+        .description {
+          width: auto;
+        }
+
+        .btn-blue {
+          padding: 15px 11px;
+        }
+      }
+    }
   }
 }
